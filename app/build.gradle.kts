@@ -53,15 +53,15 @@ android {
     productFlavors {
         create("dev"){
             dimension = "version"
-            buildConfigField("String", "VERSION", "dev")
+            buildConfigField("String", "VERSION", "\"dev\"")
         }
         create("stage"){
             dimension = "version"
-            buildConfigField("String", "VERSION", "stage")
+            buildConfigField("String", "VERSION", "\"stage\"")
         }
         create("prod"){
             dimension = "version"
-            buildConfigField("String", "VERSION", "prod")
+            buildConfigField("String", "VERSION", "\"prod\"")
         }
     }
 
@@ -74,6 +74,9 @@ android {
     }
     dataBinding{
         enable = true
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }
 
