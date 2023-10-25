@@ -17,6 +17,21 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        getByName("debug"){
+            storeFile = file("../keystore/debug.keystore")
+            storePassword = "runningday0921!!"
+            keyAlias = "runningday_debug.keystore"
+            keyPassword = "runningday0921!!"
+        }
+        create("release"){
+            storeFile = file("../keystore/release.keystore")
+            storePassword = "runningday0921!!"
+            keyAlias = "runningday_release.keystore"
+            keyPassword = "runningday0921!!"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
