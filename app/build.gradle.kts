@@ -48,6 +48,23 @@ android {
             )
         }
     }
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("dev"){
+            dimension = "version"
+            buildConfigField("String", "VERSION", "dev")
+        }
+        create("stage"){
+            dimension = "version"
+            buildConfigField("String", "VERSION", "stage")
+        }
+        create("prod"){
+            dimension = "version"
+            buildConfigField("String", "VERSION", "prod")
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
