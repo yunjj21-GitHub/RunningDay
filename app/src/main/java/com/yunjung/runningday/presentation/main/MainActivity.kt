@@ -23,13 +23,13 @@ class MainActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.lifecycleOwner = this
 
-        setBackEvent()
+        setBackPressedEvent()
     }
 
     /*
-    * backEvent 설정
+    * backPressedEvent 설정
     * */
-    private fun setBackEvent(){
+    private fun setBackPressedEvent(){
         val onBackPressedDispatcher = object: OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
                 if(System.currentTimeMillis() - backPressedTime < 2000){
