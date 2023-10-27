@@ -8,6 +8,7 @@ import androidx.fragment.app.commit
 import androidx.lifecycle.Lifecycle
 import com.yunjung.runningday.R
 import com.yunjung.runningday.base.BaseFragment
+import com.yunjung.runningday.util.RunningDayLog
 
 private fun FragmentActivity?.available(block: () -> Unit){
     this?.run{
@@ -71,9 +72,9 @@ inline fun <reified T: BaseFragment<*>> FragmentActivity.findFragment()
 fun printBackStackList(fm: FragmentManager){
     fm.backStackEntryCount.let { cnt ->
         if(cnt > 0){
-            Log.d("RunningDay", "print backstack count")
+            RunningDayLog.d("print backstack count")
             for(i in fm.backStackEntryCount - 1 downTo 0){
-                Log.d("RunningDay", "+ $i - ${fm.getBackStackEntryAt(i)}")
+                RunningDayLog.d("$i - ${fm.getBackStackEntryAt(i)}")
             }
         }
     }
