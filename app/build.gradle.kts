@@ -86,6 +86,8 @@ android {
 dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
+    // https://dl.google.com/dl/android/maven2/com/google/android/material/material/1.10.0/material-1.10.0.pom
+    // 도메인: dl.google.com, IP 주소: 142.250.196.110
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
