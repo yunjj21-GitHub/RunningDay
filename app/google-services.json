@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "911183383582",
+    "project_id": "runningday-88b52",
+    "storage_bucket": "runningday-88b52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911183383582:android:8c080823103e87b765320f",
+        "android_client_info": {
+          "package_name": "com.yunjung.runningday"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeegot2e11Qhn5Lmz2yQYeVfk22mmrG3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
