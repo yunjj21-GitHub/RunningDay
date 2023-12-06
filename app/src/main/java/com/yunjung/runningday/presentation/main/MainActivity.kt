@@ -12,7 +12,7 @@ import com.yunjung.runningday.base.BaseActivity
 import com.yunjung.runningday.base.BaseFragment
 import com.yunjung.runningday.databinding.ActivityMainBinding
 import com.yunjung.runningday.presentation.tracking.TrackingFragment
-import com.yunjung.runningday.util.RunningDayLog
+import com.yunjung.runningday.util.RDLog
 import com.yunjung.runningday.util.extension.initFragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -40,7 +40,7 @@ class MainActivity : BaseActivity() {
         val onBackPressedDispatcher = object: OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
                 val visibleFragment = supportFragmentManager.fragments.lastOrNull { it.isVisible }
-                RunningDayLog.d("${visibleFragment?.javaClass?.simpleName} back pressed")
+                RDLog.d("${visibleFragment?.javaClass?.simpleName} back pressed")
 
                 if(visibleFragment is TrackingFragment) {
                     if(System.currentTimeMillis() - backPressedTime < 2000){

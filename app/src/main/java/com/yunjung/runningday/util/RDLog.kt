@@ -4,7 +4,7 @@ import android.util.Log
 import com.yunjung.runningday.BuildConfig
 import java.lang.StringBuilder
 
-object RunningDayLog {
+object RDLog {
     const val TAG = "RDLog"
 
     // Verbose
